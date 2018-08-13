@@ -33,7 +33,8 @@ namespace BackofficeADFSAuthenticationDemo
             wsFedOptions.ForUmbracoBackOffice(style, icon);
 
             wsFedOptions.AuthenticationType = adfsFederationServerIdentifier;
-
+            
+            // https://our.umbraco.com/apidocs/csharp/api/Umbraco.Web.Security.Identity.ExternalSignInAutoLinkOptions.html
             wsFedOptions.SetExternalSignInAutoLinkOptions(new ExternalSignInAutoLinkOptions(true, null, "en-GB"));
 
             app.UseWsFederationAuthentication(wsFedOptions);
