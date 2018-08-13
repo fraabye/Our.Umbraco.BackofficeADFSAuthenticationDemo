@@ -34,7 +34,7 @@ namespace BackofficeADFSAuthenticationDemo
 
             wsFedOptions.AuthenticationType = adfsFederationServerIdentifier;
 
-            wsFedOptions.SetExternalSignInAutoLinkOptions(new ExternalSignInAutoLinkOptions(true));
+            wsFedOptions.SetExternalSignInAutoLinkOptions(new ExternalSignInAutoLinkOptions(true, null, "en-GB"));
 
             app.UseWsFederationAuthentication(wsFedOptions);
         }
